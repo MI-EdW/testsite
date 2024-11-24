@@ -1,0 +1,14 @@
+.container {
+    background-color: rgb(50,50,50);
+}
+
+.chats-container {
+    width: 10%;
+    height: 100%;
+    background-color: rgb(100,100,100);
+}
+
+.chats-img {
+    position: fixed;
+    top: 1%;
+}

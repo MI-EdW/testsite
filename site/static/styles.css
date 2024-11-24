@@ -1,0 +1,171 @@
+.openModalButton, .enter-login, .button {
+  border-style: dotted 2px;
+  border-radius: 4px;
+  border: 2px solid rgb(0, 0, 0);
+  width: 50px;  /* Ширина кнопок */
+  height: 20px;  /* Высота кнопок */
+  background-color: rgb(130, 172, 245);
+  transition-property: background-color;
+  transition-duration: 1s;
+  font-size: 1em;
+  text-align: center;  /* Центрируем текст */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.openModalButton:hover, .enter-login:hover, .button:hover {
+  background-color: rgb(90, 156, 255);
+  transition-property: background-color;
+  transition-duration: 0.2s;
+}
+
+.placeholder-modal::placeholder {
+  color: black;
+}
+
+.openModalButton {
+  width: 50px;  /* Ширина кнопки для открытия модального окна */
+  height: 20px;
+  font-size: 0.9em;
+}
+
+body {
+    background-color: rgb(30,30,30);
+}
+
+.modal {
+  visibility: visible;
+  opacity: 1;
+  transition-property: opacity visibility;
+  transition-duration: 0.3s;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+}
+
+.modal.show {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.modal-content {
+  position: relative;
+  width: 100%;
+  max-width: 400px;  /* Максимальная ширина модального окна */
+  margin: 15% auto;
+  padding: 20px;
+  background-color: rgb(90,90,90);
+  border-radius: 8px;
+}
+
+.modal-body {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5em;
+  background-color: rgb(90,90,90);
+}
+
+.modal-body input {
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 4px;
+  background-color: rgb(140,140,140);
+  padding: 10px;
+  width: 100%;
+  font-size: 1em;
+  transition-property: border;
+  transition-duration: 1s;
+}
+
+.modal-body input:hover {
+  border: 2px solid rgb(65, 140, 255);
+  transition-duration: 0.2s;
+}
+
+.login-title, .registration-button {
+  position: absolute;
+  font-size: 20px;
+  font-weight: bold;
+  word-wrap: break-word;
+  text-align: center;
+  padding: 0 10px;
+}
+
+.login-title {
+  top: -10px;
+  left: 10px;
+  font-family: "Roboto Condensed", "Arial Narrow", sans-serif;
+  font-weight: normal;
+}
+
+.enter-login {
+  width: 60%;  /* Ширина кнопки для входа */
+  height: 30%;  /* Высота кнопки для входа */
+}
+
+#invalid-login-message {
+  color: rgb(245,0,0);
+  padding-top: 0px;
+  font-size: 14px;
+  line-height: 0.2;
+  font-family: "Roboto Condensed", "Arial Narrow", sans-serif;
+}
+
+.registration-button {
+  top: -5px;
+  right: 10px;
+  cursor: pointer;
+  font-family: "Roboto Condensed", "Arial Narrow", sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+
+  color: rgb(0, 0, 0);
+  transition-property: color;
+  transition-duration: 1s;
+}
+
+.registration-button:hover {
+  color: rgb(65, 140, 255);
+  transition-property: color;
+  transition-duration: 0.2s;
+}
+
+/* Респонсивность */
+@media screen and (max-width: 480px) {
+  .modal-content {
+    padding: 10px;
+  }
+
+  .login-title {
+    font-size: 1.2em;
+  }
+
+  .button {
+    font-size: 1em;
+    padding: 12px 20px;
+    width: 100%;
+  }
+
+  .placeholder-modal {
+    font-size: 0.9em;
+    padding: 8px;
+  }
+}
+
+/* Добавлен масштабируемый текст */
+.button-span {
+  display: inline-block;
+  transform-origin: center;
+  max-width: 50%;
+  max-height: 50%;
+  white-space: normal; /* Разрешаем перенос текста */
+  font-size: 100%;  /* Пропорциональный размер */
+  word-wrap: break-word;
+}
